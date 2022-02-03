@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regiodienst. CV Booster.</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+  <main class="main">
+
+    <div class="main-page">
+      <div class="logo-container">
+        <img class="logo" src="./images/logo.png" alt="logo.png">
+        <h2 class="logo-title">CV Booster</h2>
+      </div>
+
+      <button type='button' class="main-page-btn start-btn">start hier</button>
+    </div>
+
+    <div class="logo-container-main none">
+      <img class="logo" src="./images/logo.png" alt="logo.png">
+      <h2 class="logo-title">CV Booster</h2>
+
+      <div class="line-titles">
+        <h2 class="line-title">basic info</h2>
+        <h2 class="line-title">professional</h2>
+        <h2 class="line-title">Conclusion</h2>
+      </div>
+
+      <div class="line">
+        <div class="dot-move"></div>
+        <div class="dot zero"></div>
+        <div class="dot center"></div>
+        <div class="dot full"></div>
+      </div>
+    </div>
+
+    <div class="first-page none">
+      <form class="first-step-form" action="">
+        <span class="tooltip">1. Wat is uw voornaam? *</span>
+        <input class="input input-input" type="text" name="name" id="name" placeholder="1. Wat is uw voornaam? *">
+
+        <span class="tooltip">2. Wat is uw achternaam? *</span>
+        <input class="input input-input" type="text" name="lastname" id="lastname"
+          placeholder="2. Wat is uw achternaam? *">
+
+        <span class="tooltip">3. In welke plaats bent u woonachtig? *</span>
+        <input class="input input-input" type="text" name="adress" id="adress"
+          placeholder="3. In welke plaats bent u woonachtig? *">
+
+        <span class="tooltip">4. Op welk telefoonnummer kunnen wij u bereiken? *</span>
+        <input class="input input-input" type="text" data-mask="phone" name="phone" id="phone"
+          placeholder="4. Op welk telefoonnummer kunnen wij u bereiken? *">
+
+        <span class="tooltip">5. Wat is uw e-mailadres? *</span>
+        <input class="input input-input" type="email" name="mail" id="mail" placeholder="5. Wat is uw e-mailadres? *">
+
+        <div class="input">6. Wat is uw geboortejaar? *</div>
+
+        <span class="tooltip">6. Wat is uw geboortejaar? *</span>
+        <input class="input input-input date" type="text" data-mask="date" name="yearOfBirth" id="yearOfBirth"
+          placeholder="dd.mm.yyyy">
+
+        <div class="input">7. Beschikt u over een rijbewijs? *</div>
+
+        <span class="tooltip">7. Beschikt u over een rijbewijs? *</span>
+        <input class="input input-input date" type="text" name="" id="" placeholder="Yes / No">
+
+        <button type='button' class="main-page-btn first-page-btn">next step</button>
+      </form>
+    </div>
+
+    <div class="second-page none">
+      <form class="second-step-form" action="">
+        <span class="tooltip">8. Welke opleiding(en) heeft u gevolgd? *</span>
+        <textarea class="input input-input" name="" id="" cols="30" rows="8"
+          placeholder="8. Welke opleiding(en) heeft u gevolgd? *"></textarea>
+
+        <span class="tooltip">9. Beschrijf u zelf kort in een aantal woorden. *</span>
+        <input class="input input-input" type="text" name="about" id="about"
+          placeholder="9. Beschrijf u zelf kort in een aantal woorden. *">
+
+        <span class="tooltip">10. Naar welke functie(s) bent u op zoek? *</span>
+        <textarea class="input input-input" name="" id="" cols="30" rows="3"
+          placeholder="10. Naar welke functie(s) bent u op zoek? *"></textarea>
+
+        <div class="second-step-btn-container">
+          <button type='button' class="main-page-btn previous previous-second-btn">previous step</button>
+
+          <button type='button' class="main-page-btn second-page-btn">next step</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="third-page none">
+      <form class="third-step-form" action="">
+
+        <span class="tooltip">11. Wat is de naam van uw laatste werkgever? *</span>
+        <input class="input input-input" type="text" name="about" id="about"
+          placeholder="11. Wat is de naam van uw laatste werkgever? *">
+
+        <div class="input">12. Van wanneer tm wanneer heeft u daar gewerkt? *</div>
+
+        <div class="input-date-container">
+          <label class="tooltip" for="">12.1 van</label>
+          <input class="input input-input date" type="text" data-mask="date-month-year" name="about" id="about"
+            placeholder="dd.mm.yyyy">
+
+          <label class="tooltip" for="">12.2 naar</label>
+          <input class="input input-input date" type="text" data-mask="date-month-year" name="about" id="about"
+            placeholder="dd.mm.yyyy">
+        </div>
+
+        <span class="tooltip">13. In welke functie? *</span>
+        <input class="input input-input" type="text" name="about" id="about" placeholder="13. In welke functie? *">
+
+        <span class="tooltip">14. Wat is de naam van de werkgever ervoor? *</span>
+        <input class="input input-input" type="text" name="about" id="about"
+          placeholder="14. Wat is de naam van de werkgever ervoor? *">
+
+        <div class="input">15. Van wanneer tm wanneer heeft u daar gewerkt? *</div>
+
+        <div class="input-date-container">
+          <label class="tooltip" for="">15.1 van</label>
+          <input class="input input-input date" type="text" data-mask="date-month-year" name="about" id="about"
+            placeholder="dd.mm.yyyy">
+
+          <label class="tooltip" for="">15.2 naar</label>
+          <input class="input input-input date" type="text" data-mask="date-month-year" name="about" id="about"
+            placeholder="dd.mm.yyyy">
+        </div>
+
+        <span class="tooltip">16. In welke functie? *</span>
+        <input class="input input-input" type="text" name="about" id="about" placeholder="16. In welke functie? *">
+
+        <div class="second-step-btn-container">
+          <button type='button' class="main-page-btn previous previous-third-btn">previous step</button>
+
+          <button type='button' class="main-page-btn submit-survey-btn">submit data</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="fourth-page none">
+      <div class="fourth-step-form" action="">
+        <h2>thank you for your request!</h2>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 48 48" fill="#363636">
+          <path d="M0 0h48v48h-48z" fill="none" />
+          <path id="svg-border" d="M18 32.34l-8.34-8.34-2.83 2.83 11.17 11.17 24-24-2.83-2.83z" />
+        </svg>
+
+        <button type='button' class="main-page-btn home-btn">home</button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./js/index.js"></script>
+  <script type="module" src="./js/imask.js"></script>
+</body>
+
+</html>
