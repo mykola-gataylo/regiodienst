@@ -389,6 +389,7 @@ body {
 
 .fourth-page .fourth-step-form h2 {
   font-size: 2rem;
+  text-align: center;
 }
 
 .fourth-page .fourth-step-form .main-page-btn {
@@ -503,4 +504,126 @@ body .main .line .dot.full {
 
 body .main .none {
   display: none;
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  body .main {
+    padding: 15px;
+    height: 100%;
+  }
+  body .main .logo-container-main {
+    width: 300px;
+  }
+  body .main .line-titles {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+  }
+  .main-page {
+    height: 100vh;
+  }
+  .main-page .logo-container {
+    width: 300px;
+  }
+  .main-page .main-page-btn {
+    width: 30vh;
+  }
+  .first-page {
+    width: 300px;
+  }
+  .first-page .first-step-form .input {
+    padding: 10px 10px;
+    font-size: 0.8rem;
+  }
+  .first-page .first-step-form .input::-webkit-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .first-page .first-step-form .input.date {
+    width: 50%;
+    text-align: center;
+  }
+  .first-page .first-step-form .tooltip {
+    font-size: 0.8rem;
+  }
+  .first-page .first-step-form .tooltip.required {
+    color: red;
+    text-align: center;
+  }
+  .second-page {
+    width: 300px;
+  }
+  .second-page .second-step-form .input {
+    padding: 10px 10px;
+    font-size: 0.8rem;
+  }
+  .second-page .second-step-form .input::-webkit-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .second-page .second-step-form .tooltip {
+    font-size: 0.8rem;
+  }
+  .second-page .second-step-form .tooltip.required {
+    color: red;
+    text-align: center;
+  }
+  .second-page .second-step-form .second-step-btn-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .third-page {
+    width: 300px;
+  }
+  .third-page .third-step-form .input {
+    padding: 10px 10px;
+    font-size: 0.8rem;
+  }
+  .third-page .third-step-form .input::-webkit-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .third-page .third-step-form .input-date-container {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .third-page .third-step-form .input-date-container .input {
+    padding: 10px 5px;
+    font-size: 0.8rem;
+  }
+  .third-page .third-step-form .input-date-container .input::-webkit-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .third-page .third-step-form .input-date-container .input.date {
+    width: 35%;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .third-page .third-step-form .tooltip {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .third-page .third-step-form .tooltip.required {
+    color: red;
+    text-align: center;
+  }
+  .third-page .third-step-form .second-step-btn-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .fourth-page {
+    width: 300px;
+  }
+  .fourth-page .fourth-step-form h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992.98px) and (max-width: 1367px) {
+  .main-page {
+    height: 100vh;
+  }
+  .main-page .main-page-btn {
+    width: 50vh;
+  }
 }

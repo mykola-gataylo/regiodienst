@@ -1,0 +1,173 @@
+@media (min-width: 320px) and (max-width: 576px) {
+  body {
+    .main {
+      padding: 15px;
+      height: 100%;
+
+      .logo-container-main {
+        width: 300px;
+      }
+
+      .line-titles {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+
+        .line-title {
+        }
+      }
+    }
+  }
+
+  .main-page {
+    height: 100vh;
+
+    .logo-container {
+      width: 300px;
+    }
+
+    .main-page-btn {
+      width: 30vh;
+    }
+  }
+
+  .first-page {
+    width: 300px;
+
+    .first-step-form {
+      .input {
+        padding: 10px 10px;
+        font-size: 0.8rem;
+
+        &::-webkit-input-placeholder {
+          font-size: 0.8rem;
+        }
+
+        &.date {
+          width: 50%;
+          text-align: center;
+        }
+      }
+
+      .tooltip {
+        font-size: 0.8rem;
+
+        &.required {
+          color: red;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .second-page {
+    width: 300px;
+
+    .second-step-form {
+      .input {
+        padding: 10px 10px;
+        font-size: 0.8rem;
+
+        &::-webkit-input-placeholder {
+          font-size: 0.8rem;
+        }
+      }
+
+      .tooltip {
+        font-size: 0.8rem;
+
+        &.required {
+          color: red;
+          text-align: center;
+        }
+      }
+
+      .second-step-btn-container {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .third-page {
+    width: 300px;
+
+    .third-step-form {
+      .input {
+        padding: 10px 10px;
+        font-size: 0.8rem;
+
+        &::-webkit-input-placeholder {
+          font-size: 0.8rem;
+        }
+      }
+
+      .input-date-container {
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .input {
+          padding: 10px 5px;
+          font-size: 0.8rem;
+
+          &::-webkit-input-placeholder {
+            font-size: 0.8rem;
+          }
+
+          &.date {
+            width: 35%;
+            text-align: center;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .tooltip {
+        text-align: center;
+        font-size: 0.8rem;
+
+        &.required {
+          color: red;
+          text-align: center;
+        }
+      }
+
+      .second-step-btn-container {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .fourth-page {
+    width: 300px;
+
+    .fourth-step-form {
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 576.98px) and (max-width: 768px) {
+}
+
+@media (min-width: 768.98px) and (max-width: 992px) {
+}
+
+@media (min-width: 992.98px) and (max-width: 1367px) {
+  .main-page {
+    height: 100vh;
+
+    .main-page-btn {
+      width: 50vh;
+    }
+  }
+}
+
+@media (min-width: 1367.98px) and (max-width: 2652.98px) {
+}
