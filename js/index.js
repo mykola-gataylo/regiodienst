@@ -139,6 +139,7 @@ function startSurvey() {
         clearInputsData();
 
         fourthPage.classList.add('none');
+        logoContainer.classList.add('none');
         mainPage.classList.remove('none');
       }
     });
