@@ -1,0 +1,127 @@
+// Base
+
+@import './base/reset';
+// @import './base/normalize';
+@import './base/reset.local';
+@import './base/variables';
+@import './base/typography';
+
+// Pages
+
+@import './main-page/main-page';
+@import './first-step-page/first-page';
+@import './second-step-page/second-page';
+@import './third-step-page/third-page';
+@import './fourth-page/fourth-page';
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  // padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  color: #363636;
+
+  .main {
+    height: 100vh;
+    min-width: 100%;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+
+    .logo-container-main {
+      width: 500px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .logo {
+      }
+
+      .logo-title {
+        color: #01457f;
+        font-size: 22px;
+        margin-left: 150px;
+        margin-top: -12px;
+      }
+    }
+
+    .line-titles {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .line-title {
+      }
+    }
+
+    .line {
+      width: 100%;
+      height: 5px;
+      background: #ddd;
+      position: relative;
+      border-radius: 10px;
+      overflow: visible;
+      margin-bottom: 15px;
+
+      & .dot-move {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        width: 15px;
+        height: 15px;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background: #ddd;
+        border-radius: 50%;
+        -webkit-transition: 0.3s all ease;
+        transition: 0.3s all ease;
+      }
+
+      & .dot {
+        position: absolute;
+        top: 50%;
+        width: 15px;
+        height: 15px;
+        left: 0;
+        background: #ddd;
+        border-radius: 50%;
+        -webkit-transition: 0.3s all ease;
+        transition: 0.3s all ease;
+        -webkit-transform: translate(-50%, -50%) scale(0.5);
+        -ms-transform: translate(-50%, -50%) scale(0.5);
+        transform: translate(-50%, -50%) scale(0.5);
+      }
+
+      & .dot.zero {
+        left: 0%;
+        background: #bbb;
+      }
+
+      & .dot.zero {
+        background: #5892fc;
+      }
+
+      & .dot.center {
+        left: 50%;
+        background: #bbb;
+      }
+
+      & .dot.full {
+        left: 100%;
+        background: #bbb;
+      }
+    }
+
+    .none {
+      display: none;
+    }
+  }
+}
