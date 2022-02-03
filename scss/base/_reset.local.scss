@@ -1,0 +1,18 @@
+body {
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+select,
+button,
+input[type='checkbox'] {
+  all: revert;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
