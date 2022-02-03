@@ -1,0 +1,74 @@
+.first-page {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .first-step-form {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .input {
+      width: 100%;
+      border: 1px solid #dadce0;
+      padding: 15px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding: 15px 20px;
+      background: #ddd;
+      border: 1px solid transparent;
+      color: #7e7777;
+      border-radius: 5px;
+      margin-bottom: 25px;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+
+      &.date {
+        width: 50%;
+        text-align: center;
+      }
+    }
+
+    .tooltip {
+      opacity: 0;
+      transition: all 0.5s;
+
+      &.opacity {
+        opacity: 1;
+        transition: all 0.5s;
+      }
+
+      &.required {
+        color: red;
+      }
+    }
+
+    .main-page-btn {
+      width: 200px;
+      height: 45px;
+      margin-top: 10px;
+      padding: 10px 25px;
+      background-color: #01467d;
+      border: none;
+      border-radius: 3px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      text-transform: uppercase;
+
+      &:disabled {
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+        cursor: default;
+      }
+    }
+  }
+}

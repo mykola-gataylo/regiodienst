@@ -1,0 +1,45 @@
+.main-page {
+  height: 100vh;
+  background-image: url('../../images/main-page-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo-container {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+    }
+
+    .logo-title {
+      color: #01457f;
+      font-size: 22px;
+      margin-left: 150px;
+      margin-top: -12px;
+    }
+  }
+
+  .main-page-btn {
+    width: 100vh;
+    height: 45px;
+    margin-top: 10px;
+    padding: 10px 25px;
+    background-color: #01467d;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}

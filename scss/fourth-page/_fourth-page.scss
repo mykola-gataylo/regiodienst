@@ -1,0 +1,36 @@
+.fourth-page {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .fourth-step-form {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .main-page-btn {
+      width: 200px;
+      height: 45px;
+      margin-top: 10px;
+      padding: 10px 25px;
+      background-color: #01467d;
+      border: none;
+      border-radius: 3px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+  }
+}
