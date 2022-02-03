@@ -1,0 +1,506 @@
+/*** The new CSS Reset - version 1.4.1 (last updated 23.11.2021) ***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly. */
+:where([contenteditable]) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+select,
+button,
+input[type='checkbox'] {
+  all: revert;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+html {
+  font-size: 16px;
+  /*for using REM units*/
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-page {
+  height: 100vh;
+  background-image: url("../../images/main-page-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-page .logo-container {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-page .logo-container .logo-title {
+  color: #01457f;
+  font-size: 22px;
+  margin-left: 150px;
+  margin-top: -12px;
+}
+
+.main-page .main-page-btn {
+  width: 100vh;
+  height: 45px;
+  margin-top: 10px;
+  padding: 10px 25px;
+  background-color: #01467d;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.first-page {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-page .first-step-form {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-page .first-step-form .input {
+  width: 100%;
+  border: 1px solid #dadce0;
+  padding: 15px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  background: #ddd;
+  border: 1px solid transparent;
+  color: #7e7777;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.first-page .first-step-form .input.date {
+  width: 50%;
+  text-align: center;
+}
+
+.first-page .first-step-form .tooltip {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.first-page .first-step-form .tooltip.opacity {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.first-page .first-step-form .tooltip.required {
+  color: red;
+}
+
+.first-page .first-step-form .main-page-btn {
+  width: 200px;
+  height: 45px;
+  margin-top: 10px;
+  padding: 10px 25px;
+  background-color: #01467d;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.first-page .first-step-form .main-page-btn:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: default;
+}
+
+.second-page {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-page .second-step-form {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-page .second-step-form .input {
+  width: 100%;
+  border: 1px solid #dadce0;
+  padding: 15px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  background: #ddd;
+  border: 1px solid transparent;
+  color: #7e7777;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.second-page .second-step-form .tooltip {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.second-page .second-step-form .tooltip.opacity {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.second-page .second-step-form .tooltip.required {
+  color: red;
+}
+
+.second-page .second-step-form .main-page-btn {
+  width: 200px;
+  height: 45px;
+  margin-top: 10px;
+  padding: 10px 25px;
+  background-color: #01467d;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.second-page .second-step-form .main-page-btn.previous {
+  background-color: grey;
+}
+
+.second-page .second-step-form .main-page-btn:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: default;
+}
+
+.third-page {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-page .third-step-form {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-page .third-step-form .input {
+  width: 100%;
+  border: 1px solid #dadce0;
+  padding: 15px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  background: #ddd;
+  border: 1px solid transparent;
+  color: #7e7777;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.third-page .third-step-form .input-date-container {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.third-page .third-step-form .input-date-container .input {
+  width: 100%;
+  border: 1px solid #dadce0;
+  padding: 15px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  background: #ddd;
+  border: 1px solid transparent;
+  color: #7e7777;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.third-page .third-step-form .input-date-container .input.date {
+  width: 35%;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.third-page .third-step-form .tooltip {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.third-page .third-step-form .tooltip.opacity {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.third-page .third-step-form .tooltip.required {
+  color: red;
+}
+
+.third-page .third-step-form .main-page-btn {
+  width: 200px;
+  height: 45px;
+  margin-top: 10px;
+  padding: 10px 25px;
+  background-color: #01467d;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.third-page .third-step-form .main-page-btn.previous {
+  background-color: grey;
+}
+
+.third-page .third-step-form .main-page-btn:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: default;
+}
+
+.fourth-page {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourth-page .fourth-step-form {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourth-page .fourth-step-form h2 {
+  font-size: 2rem;
+}
+
+.fourth-page .fourth-step-form .main-page-btn {
+  width: 200px;
+  height: 45px;
+  margin-top: 10px;
+  padding: 10px 25px;
+  background-color: #01467d;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  color: #363636;
+}
+
+body .main {
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+body .main .logo-container-main {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body .main .logo-container-main .logo-title {
+  color: #01457f;
+  font-size: 22px;
+  margin-left: 150px;
+  margin-top: -12px;
+}
+
+body .main .line-titles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+body .main .line {
+  width: 100%;
+  height: 5px;
+  background: #ddd;
+  position: relative;
+  border-radius: 10px;
+  overflow: visible;
+  margin-bottom: 15px;
+}
+
+body .main .line .dot-move {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 15px;
+  height: 15px;
+  transform: translate(-50%, -50%);
+  background: #ddd;
+  border-radius: 50%;
+  transition: 0.3s all ease;
+}
+
+body .main .line .dot {
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  left: 0;
+  background: #ddd;
+  border-radius: 50%;
+  transition: 0.3s all ease;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+body .main .line .dot.zero {
+  left: 0%;
+  background: #bbb;
+}
+
+body .main .line .dot.zero {
+  background: #5892fc;
+}
+
+body .main .line .dot.center {
+  left: 50%;
+  background: #bbb;
+}
+
+body .main .line .dot.full {
+  left: 100%;
+  background: #bbb;
+}
+
+body .main .none {
+  display: none;
+}

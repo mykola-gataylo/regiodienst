@@ -191,6 +191,8 @@ function validationInputs(
             previousStepBtn.disabled = false;
           }
 
+          animationStepsOfSurvey();
+
           pageNextStepBtn.textContent = nextStepTextContent;
           pageNextStepBtn.disabled = false;
 
@@ -210,11 +212,24 @@ function validationInputs(
         }
 
         pageNextStepBtn.disabled = true;
-
-        console.log(dataOfAnswers);
       }
     }
   });
+}
+
+function animationStepsOfSurvey() {
+  const stepDot = document.querySelector('.dot');
+  const stepDotContainer = document.querySelector('.dot-move');
+  let position = 0;
+
+  position += 50;
+
+  if (position > 100) {
+    position = 0;
+  }
+
+  stepDot.style = `left: ${position}%;`;
+  stepDotContainer.style = `left: ${position}%;`;
 }
 
 function clearInputsData() {
