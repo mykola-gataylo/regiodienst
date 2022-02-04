@@ -1,0 +1,75 @@
+.input-date-container {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .tooltip {
+    opacity: 1 !important;
+  }
+
+  .option {
+    background: #fff;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 10px;
+    border: 2px solid lightgrey;
+    transition: all 0.3s ease;
+
+    & .dot {
+      height: 20px;
+      width: 20px;
+      margin-right: 10px;
+      background: #d9d9d9;
+      border-radius: 50%;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 4px;
+        left: 4px;
+        width: 12px;
+        height: 12px;
+        background: #ddd;
+        border-radius: 50%;
+        opacity: 0;
+        transform: scale(1.5);
+        transition: all 0.3s ease;
+      }
+    }
+
+    span {
+      font-size: 20px;
+      color: #7e7777;
+    }
+  }
+
+  #option-1:checked:checked ~ .option-1,
+  #option-2:checked:checked ~ .option-2 {
+    border-color: #ddd;
+    background: #ddd;
+  }
+
+  #option-1:checked:checked ~ .option-1 .dot,
+  #option-2:checked:checked ~ .option-2 .dot {
+    background: #fff;
+  }
+
+  #option-1:checked:checked ~ .option-1 .dot::before,
+  #option-2:checked:checked ~ .option-2 .dot::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  #option-1:checked:checked ~ .option-1 span,
+  #option-2:checked:checked ~ .option-2 span {
+    color: #fff;
+  }
+}
