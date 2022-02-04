@@ -107,7 +107,7 @@ body {
   height: 45px;
   margin-top: 10px;
   padding: 10px 25px;
-  background-color: #01467d;
+  background-color: #01457f;
   border: none;
   border-radius: 3px;
   color: white;
@@ -129,7 +129,7 @@ body {
 }
 
 .input-date-container .option {
-  background: #fff;
+  background: #ffffff;
   height: 45px;
   width: 100%;
   display: flex;
@@ -168,7 +168,7 @@ body {
 
 .input-date-container .option span {
   font-size: 20px;
-  color: #7e7777;
+  color: #363636;
 }
 
 .input-date-container #option-1:checked:checked ~ .option-1,
@@ -179,7 +179,7 @@ body {
 
 .input-date-container #option-1:checked:checked ~ .option-1 .dot,
 .input-date-container #option-2:checked:checked ~ .option-2 .dot {
-  background: #fff;
+  background: #ffffff;
 }
 
 .input-date-container #option-1:checked:checked ~ .option-1 .dot::before,
@@ -190,13 +190,13 @@ body {
 
 .input-date-container #option-1:checked:checked ~ .option-1 span,
 .input-date-container #option-2:checked:checked ~ .option-2 span {
-  color: #fff;
+  color: #ffffff;
 }
 
 .first-page {
   width: 500px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -220,7 +220,7 @@ body {
   padding: 15px 20px;
   background: #ddd;
   border: 1px solid transparent;
-  color: #7e7777;
+  color: #363636;
   border-radius: 5px;
   margin-bottom: 25px;
   font-size: 1rem;
@@ -251,7 +251,7 @@ body {
   height: 45px;
   margin-top: 10px;
   padding: 10px 25px;
-  background-color: #01467d;
+  background-color: #01457f;
   border: none;
   border-radius: 3px;
   color: white;
@@ -271,7 +271,7 @@ body {
 .second-page {
   width: 500px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -295,7 +295,7 @@ body {
   padding: 15px 20px;
   background: #ddd;
   border: 1px solid transparent;
-  color: #7e7777;
+  color: #363636;
   border-radius: 5px;
   margin-bottom: 25px;
   font-size: 1rem;
@@ -321,7 +321,7 @@ body {
   height: 45px;
   margin-top: 10px;
   padding: 10px 25px;
-  background-color: #01467d;
+  background-color: #01457f;
   border: none;
   border-radius: 3px;
   color: white;
@@ -345,7 +345,7 @@ body {
 .third-page {
   width: 500px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -369,7 +369,7 @@ body {
   padding: 15px 20px;
   background: #ddd;
   border: 1px solid transparent;
-  color: #7e7777;
+  color: #363636;
   border-radius: 5px;
   margin-bottom: 25px;
   font-size: 1rem;
@@ -392,7 +392,7 @@ body {
   padding: 15px 20px;
   background: #ddd;
   border: 1px solid transparent;
-  color: #7e7777;
+  color: #363636;
   border-radius: 5px;
   margin-bottom: 25px;
   font-size: 1rem;
@@ -424,7 +424,7 @@ body {
   height: 45px;
   margin-top: 10px;
   padding: 10px 25px;
-  background-color: #01467d;
+  background-color: #01457f;
   border: none;
   border-radius: 3px;
   color: white;
@@ -448,7 +448,7 @@ body {
 .fourth-page {
   width: 500px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -473,7 +473,7 @@ body {
   height: 45px;
   margin-top: 10px;
   padding: 10px 25px;
-  background-color: #01467d;
+  background-color: #01457f;
   border: none;
   border-radius: 3px;
   color: white;
@@ -501,6 +501,10 @@ body .main {
   min-width: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;
+}
+
+body .main input::placeholder {
+  color: #363636;
 }
 
 body .main .logo-container-main {
@@ -619,7 +623,7 @@ body .main .none {
     font-size: 0.8rem;
   }
   .first-page .first-step-form .tooltip.required {
-    color: red;
+    color: #ff0000;
     text-align: center;
   }
   .input-date-container .option span {
@@ -639,7 +643,7 @@ body .main .none {
     font-size: 0.8rem;
   }
   .second-page .second-step-form .tooltip.required {
-    color: red;
+    color: #ff0000;
     text-align: center;
   }
   .second-page .second-step-form .second-step-btn-container {
@@ -679,7 +683,7 @@ body .main .none {
     font-size: 0.8rem;
   }
   .third-page .third-step-form .tooltip.required {
-    color: red;
+    color: #ff0000;
     text-align: center;
   }
   .third-page .third-step-form .second-step-btn-container {

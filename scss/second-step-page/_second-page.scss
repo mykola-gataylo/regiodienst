@@ -1,7 +1,7 @@
 .second-page {
   width: 500px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: $font-light-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@
       padding: 15px 20px;
       background: #ddd;
       border: 1px solid transparent;
-      color: #7e7777;
+      color: $font-dark-color;
       border-radius: 5px;
       margin-bottom: 25px;
       font-size: 1rem;
@@ -52,7 +52,7 @@
       height: 45px;
       margin-top: 10px;
       padding: 10px 25px;
-      background-color: #01467d;
+      background-color: $accent-main-color;
       border: none;
       border-radius: 3px;
       color: white;

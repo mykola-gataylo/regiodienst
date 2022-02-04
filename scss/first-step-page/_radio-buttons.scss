@@ -9,7 +9,7 @@
   }
 
   .option {
-    background: #fff;
+    background: $font-light-color;
     height: 45px;
     width: 100%;
     display: flex;
@@ -47,7 +47,7 @@
 
     span {
       font-size: 20px;
-      color: #7e7777;
+      color: $font-dark-color;
     }
   }
 
@@ -59,7 +59,7 @@
 
   #option-1:checked:checked ~ .option-1 .dot,
   #option-2:checked:checked ~ .option-2 .dot {
-    background: #fff;
+    background: $font-light-color;
   }
 
   #option-1:checked:checked ~ .option-1 .dot::before,
@@ -70,6 +70,6 @@
 
   #option-1:checked:checked ~ .option-1 span,
   #option-2:checked:checked ~ .option-2 span {
-    color: #fff;
+    color: $font-light-color;
   }
 }

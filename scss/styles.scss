@@ -21,17 +21,20 @@ html {
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
-  // padding: 0 25px;
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  color: #363636;
+  color: $font-dark-color;
 
   .main {
     height: 100vh;
     min-width: 100%;
     min-height: 100vh;
     min-height: -webkit-fill-available;
+
+    input::placeholder {
+      color: $font-dark-color;
+    }
 
     .logo-container-main {
       width: 500px;
@@ -45,7 +48,7 @@ body {
       }
 
       .logo-title {
-        color: #01457f;
+        color: $accent-main-color;
         font-size: 22px;
         margin-left: 150px;
         margin-top: -12px;
