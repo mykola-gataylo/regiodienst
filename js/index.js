@@ -62,6 +62,9 @@ const mapFirstStepData = new Map();
 const mapSecondStepData = new Map();
 const mapThirdStepData = new Map();
 
+const steps = document.querySelectorAll('.step');
+const stepDots = document.querySelectorAll('.dot');
+
 // Application
 
 function startSurvey() {
@@ -92,6 +95,10 @@ function startSurvey() {
       if (button.classList.contains('previous-second-btn')) {
         firstPage.classList.remove('none');
 
+        const stepDot = document.querySelector('.dot-container');
+
+        stepDot.classList.remove('center');
+
         secondPage.classList.add('none');
       }
 
@@ -110,6 +117,10 @@ function startSurvey() {
       if (button.classList.contains('previous-third-btn')) {
         thirdPage.classList.add('none');
 
+        const stepDot = document.querySelector('.dot-container');
+
+        stepDot.classList.remove('finish');
+
         secondPage.classList.remove('none');
       }
 
@@ -126,6 +137,9 @@ function startSurvey() {
       }
 
       if (button.classList.contains('home-btn')) {
+        const stepDot = document.querySelector('.dot-container');
+        stepDot.classList.remove('center', 'finish');
+
         const pdf = [
           ...mapFirstStepData,
           ...mapSecondStepData,
@@ -164,6 +178,21 @@ function validationInputText(pageInputs, tooltips) {
   });
 }
 
+function activeStep() {
+  const stepDot = document.querySelector('.dot');
+  const stepDotContainer = document.querySelector('.dot-container');
+
+  const steps = document.querySelectorAll('.step');
+  const styles = ['zero', 'center', 'full'];
+
+  for (let i = 0; i < steps.length; i++) {
+    if (!steps[i].classList.contains('none')) {
+      stepDot.classList.add(styles[i]);
+      stepDotContainer.classList.add(styles[i]);
+    }
+  }
+}
+
 function validationInputs(
   pageInputs,
   pageNextStepBtn,
@@ -192,7 +221,13 @@ function validationInputs(
             previousStepBtn.disabled = false;
           }
 
-          animationStepsOfSurvey();
+          const stepDot = document.querySelector('.dot-container');
+
+          if (pageNextStepBtn === firstPageBtn) {
+            stepDot.classList.add('center');
+          } else if (pageNextStepBtn === secondPageBtn) {
+            stepDot.classList.add('finish');
+          }
 
           pageNextStepBtn.textContent = nextStepTextContent;
           pageNextStepBtn.disabled = false;
@@ -218,19 +253,15 @@ function validationInputs(
   });
 }
 
-function animationStepsOfSurvey() {
+function startPositionOfStepDots() {
   const stepDot = document.querySelector('.dot');
-  const stepDotContainer = document.querySelector('.dot-move');
-  let position = 0;
+  const stepDotContainer = document.querySelector('.dot-container');
 
-  position += 50;
+  stepDot.classList.remove('full');
+  stepDotContainer.classList.remove('full');
 
-  if (position > 100) {
-    position = 0;
-  }
-
-  stepDot.style = `left: ${position}%;`;
-  stepDotContainer.style = `left: ${position}%;`;
+  stepDot.classList.remove('center');
+  stepDotContainer.classList.remove('center');
 }
 
 function clearInputsData() {
