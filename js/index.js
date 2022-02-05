@@ -140,13 +140,27 @@ function startSurvey() {
         const stepDot = document.querySelector('.dot-container');
         stepDot.classList.remove('center', 'finish');
 
-        const pdf = [
+        let arrD = [
           ...mapFirstStepData,
           ...mapSecondStepData,
           ...mapThirdStepData,
         ];
 
-        const data = Object.fromEntries(pdf);
+        for (let i = 0; i < arrD.length; i++) {
+          const space = /\s/;
+          let indexOfSpace;
+
+          for (let k = 0; k < arrD[i].length; k++) {
+            if (k === 0) {
+              indexOfSpace = arrD[i][k].search(space);
+
+              arrD[i][k].slice(indexOfSpace);
+              arrD[i][k] = arrD[i][k].slice(0, indexOfSpace);
+            }
+          }
+        }
+
+        const data = Object.fromEntries(arrD);
 
         console.log(data);
 
@@ -270,6 +284,50 @@ function clearInputsData() {
   });
 }
 
+const dataCopy = {
+  '1. Wat is uw voornaam? *': 'GHFGH',
+  '2. Wat is uw achternaam? *': 'HFGHFGH',
+  '3. In welke plaats bent u woonachtig? *': 'FGHFGH',
+  '4. Op welk telefoonnummer kunnen wij u bereiken? *': '+',
+  '5. Wat is uw e-mailadres? *': 'FGHFGH',
+  '6. Wat is uw geboortejaar? *': '20.02.4',
+  '7. Beschikt u over een rijbewijs? *': 'ON',
+  '8. Welke opleiding(en) heeft u gevolgd? *': 'R',
+  '9. Beschrijf u zelf kort in een aantal woorden. *': 'R',
+  '10. Naar welke functie(s) bent u op zoek? *': 'R',
+  '11. Wat is de naam van uw laatste werkgever? *': 'R',
+  '12.1 van': '1',
+  '12.2 naar': '1',
+  '13. In welke functie? *': 'D',
+  '14. Wat is de naam van de werkgever ervoor? *': 'FGHGHF',
+  '15.1 van': '1',
+  '15.2 naar': '1',
+  '16. In welke functie? *': 'FGHFGHFGHF',
+};
+
+let arrD = [
+  ['1. Wat is uw voornaam? *', 'GHFGH'],
+  ['2. Wat is uw achternaam? *', 'HFGHFGH'],
+  ['3. In welke plaats bent u woonachtig? *', 'FGHFGH'],
+  ['4. Op welk telefoonnummer kunnen wij u bereiken? *', '+'],
+  ['5. Wat is uw e-mailadres? *', 'FGHFGH'],
+  ['6. Wat is uw geboortejaar? *', '20.02.4'],
+  ['7. Beschikt u over een rijbewijs? *', 'ON'],
+  ['8. Welke opleiding(en) heeft u gevolgd? *', 'R'],
+  ['9. Beschrijf u zelf kort in een aantal woorden. *', 'R'],
+  ['10. Naar welke functie(s) bent u op zoek? *', 'R'],
+  ['11. Wat is de naam van uw laatste werkgever? *', 'R'],
+  ['12.1. van', '1'],
+  ['12.2. naar', '1'],
+  ['13. In welke functie? *', 'D'],
+  ['14. Wat is de naam van de werkgever ervoor? *', 'FGHGHF'],
+  ['15.1. van', '1'],
+  ['15.2. naar', '1'],
+  ['16. In welke functie? *', 'FGHFGHFGHF'],
+];
+
+// console.log(arrD);
+
 // IMask
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -303,10 +361,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Маска для даты - месяц, год
-  mask('date-month-year', {
-    mask: Date,
-    min: new Date(1900, 0, 1), // минимальная дата 01.01.1900
-  });
+  // mask('date-month-year', {
+  //   mask: Date,
+  //   min: new Date(1900, 0, 1), // минимальная дата 01.01.1900
+  // });
 
   // Маска для числа
   mask('number', {
