@@ -224,8 +224,11 @@ function validationInputs(
     } else if (el.value !== '') {
       dataOfAnswers.set(
         tooltips[index].textContent,
+
         el.value.trim().toUpperCase()
       );
+
+      // console.log(dataOfAnswers);
 
       tooltips[index].classList.remove('opacity');
 
@@ -284,95 +287,51 @@ function clearInputsData() {
   });
 }
 
-const dataCopy = {
-  '1. Wat is uw voornaam? *': 'GHFGH',
-  '2. Wat is uw achternaam? *': 'HFGHFGH',
-  '3. In welke plaats bent u woonachtig? *': 'FGHFGH',
-  '4. Op welk telefoonnummer kunnen wij u bereiken? *': '+',
-  '5. Wat is uw e-mailadres? *': 'FGHFGH',
-  '6. Wat is uw geboortejaar? *': '20.02.4',
-  '7. Beschikt u over een rijbewijs? *': 'ON',
-  '8. Welke opleiding(en) heeft u gevolgd? *': 'R',
-  '9. Beschrijf u zelf kort in een aantal woorden. *': 'R',
-  '10. Naar welke functie(s) bent u op zoek? *': 'R',
-  '11. Wat is de naam van uw laatste werkgever? *': 'R',
-  '12.1 van': '1',
-  '12.2 naar': '1',
-  '13. In welke functie? *': 'D',
-  '14. Wat is de naam van de werkgever ervoor? *': 'FGHGHF',
-  '15.1 van': '1',
-  '15.2 naar': '1',
-  '16. In welke functie? *': 'FGHFGHFGHF',
-};
+function masksOfInputs() {
+  const dateInputs = document.querySelectorAll('#date');
+  const dateOfBirth = document.querySelector('#yearOfBirth');
+  const phone = document.querySelector('#phone');
 
-let arrD = [
-  ['1. Wat is uw voornaam? *', 'GHFGH'],
-  ['2. Wat is uw achternaam? *', 'HFGHFGH'],
-  ['3. In welke plaats bent u woonachtig? *', 'FGHFGH'],
-  ['4. Op welk telefoonnummer kunnen wij u bereiken? *', '+'],
-  ['5. Wat is uw e-mailadres? *', 'FGHFGH'],
-  ['6. Wat is uw geboortejaar? *', '20.02.4'],
-  ['7. Beschikt u over een rijbewijs? *', 'ON'],
-  ['8. Welke opleiding(en) heeft u gevolgd? *', 'R'],
-  ['9. Beschrijf u zelf kort in een aantal woorden. *', 'R'],
-  ['10. Naar welke functie(s) bent u op zoek? *', 'R'],
-  ['11. Wat is de naam van uw laatste werkgever? *', 'R'],
-  ['12.1. van', '1'],
-  ['12.2. naar', '1'],
-  ['13. In welke functie? *', 'D'],
-  ['14. Wat is de naam van de werkgever ervoor? *', 'FGHGHF'],
-  ['15.1. van', '1'],
-  ['15.2. naar', '1'],
-  ['16. In welke functie? *', 'FGHFGHFGHF'],
-];
-
-// console.log(arrD);
-
-// IMask
-
-document.addEventListener('DOMContentLoaded', () => {
-  const mask = (dataValue, options) => {
-    // создаем универсальную функцию
-    const elements = document.querySelectorAll(`[data-mask="${dataValue}"]`); // ищем поля ввода по селектору с переданным значением data-атрибута
-    if (!elements) return; // если таких полей ввода нет, прерываем функцию
-
-    elements.forEach((el) => {
-      // для каждого из полей ввода
-      IMask(el, options); // инициализируем плагин imask для необходимых полей ввода с переданными параметрами маски
+  dateInputs.forEach((input) => {
+    input.addEventListener('keyup', () => {
+      if (input.value.length === 2) {
+        input.value += '.';
+        input.textContent = input.value;
+      }
     });
-  };
-
-  // Используем наше функцию mask для разных типов масок
-
-  // Маска для номера телефона
-  mask('phone', {
-    mask: '+{00} (000)-0000-00',
   });
 
-  // Маска для почтового индекса
-  mask('postalCode', {
-    mask: '000000', // шесть цифр
+  dateOfBirth.addEventListener('keyup', () => {
+    if (dateOfBirth.value.length === 2) {
+      dateOfBirth.value += '.';
+      dateOfBirth.textContent = dateOfBirth.value;
+    } else if (dateOfBirth.value.length === 5) {
+      dateOfBirth.value += '.';
+      dateOfBirth.textContent = dateOfBirth.value;
+    }
   });
 
-  // Маска для полной даты
-  mask('date', {
-    mask: Date,
-    min: new Date(1900, 0, 1), // минимальная дата 01.01.1900
+  phone.addEventListener('keyup', () => {
+    if (phone.value.length === 1) {
+      phone.value = '+ ';
+      phone.textContent = phone.value;
+    } else if (phone.value.length === 4) {
+      phone.value += ' ';
+      phone.textContent = phone.value;
+    } else if (phone.value.length === 5) {
+      phone.value += ' ';
+      phone.textContent = phone.value;
+    } else if (phone.value.length === 8) {
+      phone.value += ' ';
+      phone.textContent = phone.value;
+    } else if (phone.value.length === 13) {
+      phone.value += ' ';
+      phone.textContent = phone.value;
+    }
   });
-
-  // Маска для даты - месяц, год
-  // mask('date-month-year', {
-  //   mask: Date,
-  //   min: new Date(1900, 0, 1), // минимальная дата 01.01.1900
-  // });
-
-  // Маска для числа
-  mask('number', {
-    mask: Number,
-    thousandsSeparator: ' ', // разделитель тысяч в числе
-  });
-});
+}
 
 window.addEventListener('load', () => {
   startSurvey();
+  masksOfInputs();
 });

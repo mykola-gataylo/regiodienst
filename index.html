@@ -55,8 +55,8 @@
           placeholder="3. In welke plaats bent u woonachtig? *">
 
         <span class="tooltip">4. Op welk telefoonnummer kunnen wij u bereiken? *</span>
-        <input class="input input-input" type="text" data-mask="phone" name="4" id="phone"
-          placeholder="4. Op welk telefoonnummer kunnen wij u bereiken? *">
+        <input class="input input-input" type="text" name="4" id="phone"
+          placeholder="4. Op welk telefoonnummer kunnen wij u bereiken? *" maxlength="16">
 
         <span class="tooltip">5. Wat is uw e-mailadres? *</span>
         <input class="input input-input" type="email" name="5" id="mail" placeholder="5. Wat is uw e-mailadres? *">
@@ -64,25 +64,25 @@
         <div class="input">6. Wat is uw geboortejaar? *</div>
 
         <span class="tooltip">6. Wat is uw geboortejaar? *</span>
-        <input class="input input-input date" type="text" data-mask="date" name="6" id="yearOfBirth"
-          placeholder="dd.mm.yyyy">
+        <input class="input input-input date" type="text" name="6" id="yearOfBirth" placeholder="dd.mm.yyyy"
+          maxlength="10">
 
         <div class="input">7. Beschikt u over een rijbewijs? *</div>
 
         <span class="tooltip">7. Beschikt u over een rijbewijs? *</span>
 
         <div class="input-date-container">
-          <input class="input-input" type="radio" name="select" id="option-1" value="yes" checked>
-          <input class="input-input" type="radio" name="select" id="option-2" value="no">
+          <input class="input-input tooltip" type="radio" name="select" id="option-1" value="yes" checked>
+          <input class="input-input tooltip" type="radio" name="select" id="option-2" value="no">
 
           <label for="option-1" class="option option-1">
             <div class="dot"></div>
-            <span class="tooltip">Yes</span>
+            <span>Yes</span>
           </label>
 
           <label for="option-2" class="option option-2">
             <div class="dot"></div>
-            <span class="tooltip">No</span>
+            <span>No</span>
           </label>
         </div>
 
@@ -123,12 +123,11 @@
 
         <div class="input-date-container">
           <label class="tooltip" for="">12.1. van</label>
-          <input class="input input-input date" type="text" data-mask="date-month-year" name="12-start" id="about"
-            placeholder="dd.mm.yyyy">
+          <input class="input input-input date" type="text" name="12-start" id="date" placeholder="mm.yyyy"
+            maxlength="7">
 
           <label class="tooltip" for="">12.2. naar</label>
-          <input class="input input-input date" type="text" data-mask="date-month-year" name="12-end" id="about"
-            placeholder="dd.mm.yyyy">
+          <input class="input input-input date" type="text" name="12-end" id="date" placeholder="mm.yyyy" maxlength="7">
         </div>
 
         <span class="tooltip">13. In welke functie? *</span>
@@ -142,12 +141,11 @@
 
         <div class="input-date-container">
           <label class="tooltip" for="">15.1. van</label>
-          <input class="input input-input date" type="text" data-mask="date-month-year" name="15-start" id="about"
-            placeholder="dd.mm.yyyy">
+          <input class="input input-input date" type="text" name="15-start" id="date" placeholder="mm.yyyy"
+            maxlength="7">
 
           <label class="tooltip" for="">15.2. naar</label>
-          <input class="input input-input date" type="text" data-mask="date-month-year" name="15-end" id="about"
-            placeholder="dd.mm.yyyy">
+          <input class="input input-input date" type="text" name="15-end" id="date" placeholder="mm.yyyy" maxlength="7">
         </div>
 
         <span class="tooltip">16. In welke functie? *</span>
@@ -176,7 +174,6 @@
   </main>
 
   <script type="module" src="./js/index.js"></script>
-  <script type="module" src="./js/imask.js"></script>
 </body>
 
 </html>
