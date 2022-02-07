@@ -125,7 +125,17 @@ body {
 }
 
 .input-date-container .tooltip {
-  opacity: 1 !important;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.input-date-container .tooltip.opacity {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.input-date-container .tooltip.required {
+  color: red;
 }
 
 .input-date-container .option {

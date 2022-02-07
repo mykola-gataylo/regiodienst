@@ -224,11 +224,15 @@ function validationInputs(
     } else if (el.value !== '') {
       dataOfAnswers.set(
         tooltips[index].textContent,
-
         el.value.trim().toUpperCase()
       );
 
-      // console.log(dataOfAnswers);
+      if (currentPage === firstPage) {
+        dataOfAnswers.set(
+          '7. Beschikt u over een rijbewijs? *',
+          document.querySelector('[name="select"]:checked').value
+        );
+      }
 
       tooltips[index].classList.remove('opacity');
 
@@ -268,6 +272,21 @@ function validationInputs(
       }
     }
   });
+}
+
+function check() {}
+
+function addTooltip() {
+  const radio = document.querySelectorAll('[name="select"]');
+
+  for (let i = 0; i < radio.length; i++) {
+    radio[i].addEventListener('click', () => {
+      for (let k = 0; k < radio.length; k++) {
+        radio[k].classList.remove('tooltip', 'opacity', 'required');
+      }
+      radio[i].classList.add('tooltip');
+    });
+  }
 }
 
 function startPositionOfStepDots() {
@@ -334,4 +353,5 @@ function masksOfInputs() {
 window.addEventListener('load', () => {
   startSurvey();
   masksOfInputs();
+  addTooltip();
 });
