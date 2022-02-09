@@ -274,20 +274,18 @@ function validationInputs(
   });
 }
 
-function check() {}
-
-function addTooltip() {
-  const radio = document.querySelectorAll('[name="select"]');
-
-  for (let i = 0; i < radio.length; i++) {
-    radio[i].addEventListener('click', () => {
-      for (let k = 0; k < radio.length; k++) {
-        radio[k].classList.remove('tooltip', 'opacity', 'required');
-      }
-      radio[i].classList.add('tooltip');
-    });
-  }
+function deleteNonLatin(text) {
+  return text.replace(/[^A-Za-z]/gi, '');
 }
+
+const inputs = document.querySelectorAll('.text');
+
+inputs.forEach((input) => {
+  input.addEventListener('input', (e) => {
+    const cleanValue = deleteNonLatin(e.target.value);
+    e.target.value = cleanValue;
+  });
+});
 
 function startPositionOfStepDots() {
   const stepDot = document.querySelector('.dot');
@@ -353,5 +351,4 @@ function masksOfInputs() {
 window.addEventListener('load', () => {
   startSurvey();
   masksOfInputs();
-  addTooltip();
 });
